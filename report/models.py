@@ -54,7 +54,7 @@ class News(models.Model):
 @receiver(post_save, sender=News)
 def viewer_singnals(sender, instance, created, **kwargs):
     if created:
-        instance.views = 10
+        instance.views = 11
         instance.save()
 
 @receiver(post_delete, sender=News)
